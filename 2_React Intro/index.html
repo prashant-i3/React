@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Counter App</title>
+    <!-- CDN  Links -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!--React Algo-->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!--React DOM-->
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+</body>
+<script type="text/babel">
+    // // adding h1 element with using of DOM 
+    // let ele = document.createElement('h1');
+    // ele.innerHTML = 'Hello'
+    // let root = document.getElementById('root')
+    // root.appendChild(ele);
+
+    // // Now lets do this with the help of React 
+    // let root = document.getElementById('root')
+    // let ele = React.createElement('h1', {
+    //     children : ['Hello']
+    // })
+    // console.log(ele)
+    // // root.appendChild(ele) //instead we use react DOM
+    // ReactDOM.render(ele,root);
+
+    // JSX 
+
+    // Functional Component 
+    function Element() {
+        return (
+            <h1>Hello</h1>
+        )
+    }
+
+    // Reuseability.
+    function Main(){
+        return(
+            <React.Fragment>
+                <Element/>
+                <Element/>
+                <Element/>
+                <Element/>
+                <Element/>
+            </React.Fragment>
+        )
+    }
+
+    // ReactDOM.render(<Element/>, document.getElementById('root'))
+    ReactDOM.render(<Main/>, document.getElementById('root'))
+
+</script>
+
+</html>
